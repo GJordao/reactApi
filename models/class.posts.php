@@ -45,8 +45,7 @@ class Posts
 
     public function remove($values)
     {
-        $json = json_decode($values[0], true);
-        $id = $json['id'];
+        $id = $values[0];
         $res = execute_query(
             "DELETE FROM posts WHERE id = '$id'"
         );
